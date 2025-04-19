@@ -1,6 +1,6 @@
-## UUPS Contracts Upgrade Case 
+## UUPS 升级案例
 
-This a UPS Contracts Upgrade Case For The Web3 Community training course.
+The Web3 社区 UUPS 升级案例课堂演示实战代码
 
 ## 安装依赖
 
