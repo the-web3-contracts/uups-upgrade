@@ -40,6 +40,9 @@ cast call --rpc-url 127.0.0.1:8545 0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e  "
 ```
 
 #### 部署第二版本合约
+
+部署第二版合约时需要执行：`forge clean && forge build`
+
 ```shell
 forge script ./script/UUPSContractV2Script.sol:UUPSContractV2Script  --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
 ```
