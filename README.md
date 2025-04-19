@@ -35,11 +35,16 @@ forge script ./script/UUPSContractV1Script.sol:UUPSContractV1Script  --rpc-url 1
 
 #### 升级前测试
 ```shell
-cast send --rpc-url 127.0.0.1:8545 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512  "setValue(uint256)" 100 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
-guoshijiang@192 uups-upgrade % cast call --rpc-url 127.0.0.1:8545 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512  "value()(uint256)"
+cast send --rpc-url 127.0.0.1:8545 0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e  "setValue(uint256)" 100 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+cast call --rpc-url 127.0.0.1:8545 0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e  "value()(uint256)"
 ```
 
 #### 部署第二版本合约
 ```shell
 forge script ./script/UUPSContractV2Script.sol:UUPSContractV2Script  --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+```
+
+#### 升级后测试
+```shell
+cast call --rpc-url 127.0.0.1:8545 0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e  "value()(uint256)"
 ```
